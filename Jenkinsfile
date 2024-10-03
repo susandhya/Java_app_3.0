@@ -73,6 +73,13 @@ pipeline{
                }
             }
         }
+        /*stage('Jfrog Integration'){
+            steps{
+                script{
+                    
+                }
+            }
+        }*/
         stage('Docker Image Build'){
          when { expression {  params.action == 'create' } }
             steps{
